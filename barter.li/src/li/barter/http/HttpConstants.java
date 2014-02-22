@@ -26,14 +26,16 @@ public class HttpConstants {
 	 */
 	private enum Server {
 
-		LOCAL("http://162.243.198.171/api/v", API_VERSION), DEV(
-				"http://162.243.198.171/api/v", API_VERSION), PRODUCTION(
-				"http://162.243.198.171/api/v", API_VERSION);
+		LOCAL("http://162.243.198.171/api/v", API_VERSION, ""), DEV(
+				"http://162.243.198.171/api/v", API_VERSION, ""), PRODUCTION(
+				"http://162.243.198.171/api/v", API_VERSION, "");
 
-		public final String mUrl;
+		public final String mApiUrl;
+		public final String mSocketUri;
 
-		Server(String url, int version) {
-			mUrl = url + version;
+		Server(String url, int version, String socketUri) {
+			mApiUrl = url + version;
+			mSocketUri = socketUri;
 		}
 	}
 
@@ -42,7 +44,11 @@ public class HttpConstants {
 	private static Server SERVER = Server.LOCAL;
 
 	public static String getApiBaseUrl() {
-		return SERVER.mUrl;
+		return SERVER.mApiUrl;
+	}
+
+	public static String getSocketUri() {
+		return SERVER.mSocketUri;
 	}
 
 	/**
@@ -57,6 +63,9 @@ public class HttpConstants {
 		public static final String USER_PREFERRED_LOCATION = "/user_preferred_location.json";
 	}
 
+	public static final String CHAT_SOCKET_ENDPOINT = "";
+
+	/* Keys used in Http requests and responses */
 	public static final String Q = "q";
 	public static final String T = "t";
 	public static final String TITLE = "title";
