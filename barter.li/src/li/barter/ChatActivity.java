@@ -45,6 +45,7 @@ public class ChatActivity extends AbstractBarterLiActivity implements FayeListen
 		mHandler = new Handler();
 		mFayeClient = new FayeClient(mHandler, URI.create(HttpConstants.getSocketUri()), HttpConstants.CHAT_SOCKET_ENDPOINT);
 		mFayeClient.setFayeListener(this);
+		mFayeClient.connectToServer(new JSONObject());
 
 	}
 
