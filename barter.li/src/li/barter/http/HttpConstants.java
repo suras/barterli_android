@@ -26,7 +26,7 @@ public class HttpConstants {
 	 */
 	private enum Server {
 
-		LOCAL("http://162.243.198.171/api/v", API_VERSION, "http://162.243.198.171/api/v1/chat/public"), DEV(
+		LOCAL("http://162.243.198.171/api/v", API_VERSION, "ws://162.243.198.171:9292/faye"), DEV(
 				"http://162.243.198.171/api/v", API_VERSION, ""), PRODUCTION(
 				"http://162.243.198.171/api/v", API_VERSION, "");
 
