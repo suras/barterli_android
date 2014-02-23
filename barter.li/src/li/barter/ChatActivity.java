@@ -81,7 +81,11 @@ public class ChatActivity extends AbstractBarterLiActivity implements FayeListen
 
 		if(v.getId() == R.id.button_send_message) {
 			try {
-				mFayeClient.sendMessage(new JSONObject(mReceivedChatTextView.getText().toString()));
+				
+				JSONObject message = new JSONObject();
+				//message.put(HttpConstants.SENDER_ID, "sender_id");
+				message.put(HttpConstants.MESSAGE, "Test Message! barter.li rocks!");
+				mFayeClient.sendMessage(message);
 			} catch (JSONException e) {
 				e.printStackTrace();
 			}

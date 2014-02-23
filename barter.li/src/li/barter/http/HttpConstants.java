@@ -26,7 +26,7 @@ public class HttpConstants {
 	 */
 	private enum Server {
 
-		LOCAL("http://162.243.198.171/api/v", API_VERSION, "http://162.243.198.171/api/v1/chat"), DEV(
+		LOCAL("http://162.243.198.171/api/v", API_VERSION, "http://162.243.198.171/api/v1/chat/public"), DEV(
 				"http://162.243.198.171/api/v", API_VERSION, ""), PRODUCTION(
 				"http://162.243.198.171/api/v", API_VERSION, "");
 
@@ -63,7 +63,7 @@ public class HttpConstants {
 		public static final String USER_PREFERRED_LOCATION = "/user_preferred_location.json";
 	}
 
-	public static final String CHAT_SOCKET_ENDPOINT = "";
+	public static final String CHAT_SOCKET_ENDPOINT = "/messages";
 
 	/* Keys used in Http requests and responses */
 	public static final String Q = "q";
@@ -74,5 +74,10 @@ public class HttpConstants {
 	public static final String AUTHOR = "author";
 	public static final String NAME = "name";
 	public static final String PUBLICATION_YEAR = "publication_year";
+	public static final String MESSAGE = "message";
+	public static final String SENDER_ID = "sender_id";
+	public static final String USER_EMAIL = "user_email";
+	public static final String USER_TOKEN = "user_token";
+	
 
 }
