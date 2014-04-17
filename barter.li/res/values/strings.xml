@@ -185,5 +185,15 @@
         <item>ListViewAnimations, A library to easily add animations to List Items. Licensed under the Apache v2.0 License.\nhttps://github.com/nhaarman/ListViewAnimations</item>
         <item>Crouton, Context sensitive notifications for Android. Licensed under the Apache v2.0 License.\nhttps://github.com/keyboardsurfer/Crouton</item>
     </string-array>
-
+    
+    <!-- String Related to Password Reset -->
+    <string name="reset_password_email_text">Email To Send Reset Token</string>
+    <string name="rest_password_email_hint">Email</string>
+    <string name="reset_password_text">Reset Password</string>
+    <string name="reset_password_new_hint">New Password</string>
+    <string name="reset_password_token_hint">Token</string>
+    <string name="send_reset_token">Send Token</string>
+    <string name="set_password_reset">Reset Password</string>
+    
+   
 </resources>
